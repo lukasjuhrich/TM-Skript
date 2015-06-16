@@ -259,7 +259,23 @@ $\left\{
 %
 \subsection{Nicht-Inertialsysteme und Scheinkräfte}
 %
-
+Sei ($O,\vec{e_1},\vec{e_2},\vec{e_3}$) IS\\
+$\rightarrow$ gehe über zu beschleunigtem (rotierendem) BS\\
+$\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
+\begin{enumerate}
+	\item Einführung einer zeitabhängigen Rotation:
+	\begin{flalign*}
+		\vec{e_i}'(t)=R(t)\vec{e_i}\\
+		RR^T=\mathds{1}
+	\end{flalign*}
+	in BS' $\vec{r}'(t)=\sumni x_i'(t)\vec{e_i}'(t)$\\
+	für Geschwindigkeit folgt:
+	\begin{flalign*}
+		& \diff{}{t}(\vec{r}'(t))=\sumni \dot{x}_i'(t)\vec{e_i}'(t)+\sumni x_i'(t)\dot{\vec{e_i}'}(t)=\underbrace{\dot{\vec{r}'}}_{\text{Geschwindigkeit gemessen in BS'}}+\sumni x_i'(t)\dot{\vec{e_i}'}(t)\\
+		& \ulcorner \dot{\vec{e_i}'}=\dot{R}(t)\vec{e_i}=\dot{R}R^T\vec{e_i}'\lrcorner \\
+		& \Rightarrow \diff{}{t}\vec{r}'=\vec{V_{BS}}+\sumni x_i'(t)(\dot{R}R^T)\vec{e_i}'
+	\end{flalign*}
+\end{enumerate}
 
 
 
