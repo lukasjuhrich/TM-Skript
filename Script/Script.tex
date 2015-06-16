@@ -1,0 +1,44 @@
+\documentclass[fleqn]{scrartcl}
+\usepackage[ngerman]{babel} 
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath} 
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{empheq}
+\usepackage{xcolor}
+
+%layout optionen
+\definecolor{lblue}{HTML}{88E6FF}
+
+%Coms
+\renewcommand{\labelitemi}{$\rightarrow$}
+\newcommand{\holine}{\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}} 
+\newcommand{\M}{\mathbb} 
+\newcommand{\T}{\text} 
+\newcommand{\D}{\cdot} 
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\diff}[2]{\frac{\text{d} #1}{\text{d} #2}}
+\newcommand{\mybox[1]}{\colorbox{red}{\hspace{1em}#1\hspace{1em}}}
+\newcommand{\emalign}[1]{\begin{empheq}[box=\colorbox{lblue}]{flalign}
+#1
+\end{empheq}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\const}{\text{const.}}
+\newcommand{\ges}{\text{ges}}
+\newcommand{\sumni}{\sum_{i=1}^{N}}
+\newcommand{\sumij}{\sum_{i,j=1; j\neq i}^{N}}
+
+\begin{document}
+
+\title{Theoretische Mechanik}
+\author{Till Hanke}
+\date{Today}
+\maketitle
+\tableofcontents
+\newpage
+\input{RaumundZeit.tex}
+\input{NewtonscheMechanik.tex}
+\end{document}
