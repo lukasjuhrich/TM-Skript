@@ -31,6 +31,16 @@
 \newcommand{\ges}{\text{ges}}
 \newcommand{\sumni}{\sum_{i=1}^{N}}
 \newcommand{\sumij}{\sum_{i,j=1; j\neq i}^{N}}
+\newcommand{\skizze}[1]{
+	\begin{figure}[h]
+		\begin{center}
+			\includegraphics[width=0.4\textwidth]{skizze.jpg}
+		\end{center}
+		\caption{#1}
+	\end{figure}
+}
+\newcommand{\desc}[1]{\item[#1]~\par}
+
 
 \begin{document}
 
@@ -40,6 +50,9 @@
 \maketitle
 \tableofcontents
 \newpage
-\input{RaumundZeit.tex}
-\input{NewtonscheMechanik.tex}
+\input{1.RaumundZeit.tex}
+\newpage
+\input{2.NewtonscheMechanik.tex}
+\newpage
+\input{5.kleineSchwingungen.tex}
 \end{document}
