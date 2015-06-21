@@ -122,10 +122,10 @@ m_i\ddot{\vec{r_i}}=\vec{F_i^{(a)}}(\vec{r_i})+\sum_{i=1, j\neq i}^{N}\vec{F_{ij
 	\caption{innere und äußere Kräfte}
 \end{figure}
 \emph{für konservative Kräfte} 
-\begin{flalign}
+\begin{flalign*}
 	\vec{F_i^{(a)}}=-\vec{\nabla_i} U_i(\vec{r_i})\\
 	\vec{F_{ij}}=-\vec{\nabla_i}V_{ij}(|\vec{r_i}-\vec{r_j}|)
-\end{flalign}
+\end{flalign*}
 Gesamtenergieerhaltung: $E=T+U^{(a)}+v^{WW}$\\
 \paragraph{Bemerkungen:}
 	\begin{enumerate}
@@ -153,26 +153,26 @@ für abgeschlossene Systeme
 
 \subsection{Impuls und Drehimpuls}
 \paragraph{Gesamtimpuls:}
-\begin{flalign}
+\begin{flalign*}
 	\vec{P}_{CM}=\sum_{i=1}^{N}m_i\dot{\vec{r}}_i=M\dot{\vec{R}}_{CM}
-\end{flalign}
+\end{flalign*}
 \paragraph{Änderung:}
-\begin{flalign}
+\begin{flalign*}
 	\diff{}{t}\vec{P_{CM}}=\sum_{i=1}^{N}(\vec{F_i}^{(a)}+\sum_{j=1; j\neq i}^{N}\vec{F_{ji}})\\
 	=\sum_{i=1}^{N}\vec{F_i}^{(a)}+\underbrace{\sum_{i,j=1; i\neq j}^{N}\vec{F_{ji}}}_{=0\text{ (alle Kräfte und ihre Gegenkräfte)}}=\sum_{i=1}^{N}\vec{F_i}^{(a)}
-\end{flalign}
+\end{flalign*}
 \paragraph{Bemerkungen:}
 \begin{enumerate}
 	\item für abgeschlossene Systeme gilt Gesamtimpulserhaltung:
-	\begin{flalign}
+	\begin{flalign*}
 		\vec{P_{CM}}(t)=\vec{P_{CM}}(0)=\text{const.}\\
 		\text{falls:}\vec{F_i}^{(a)}=0
-	\end{flalign}
+	\end{flalign*}
 	\item für $\vec{R_{CM}}$ folgt für abgeschlossene Systeme: 'Schwerpunktsatz'
 \\
-\begin{flalign}
+\begin{flalign*}
 \vec{R_{cm}}(t)=\vec{R_{CM}}(t_0)+\frac{P{CM}(t_0)}{M}(t-t_0)
-\end{flalign}
+\end{flalign*}
 Schwerpunkt bewegt sich geradlinig-gleichförmig (für abgeschlossene Systeme)
 \item Beschreibung der Dynamik ausgedehnter Pbjekte durch Punktteilchen (Schwerpunkt) ist gerechtfertigt
 \item $\vec{P_{CM}}=\const$ sehr wichtig für Stoßprozesse gültig für
@@ -187,42 +187,42 @@ $\left\{
 %
 \subsubsection{Drehimpuls}
 %
-\begin{flalign}
+\begin{flalign*}
 \underbrace{\vec{L}=\vec{r}\times\vec{p}}_{\text{(hängt von der Wahl des Ursprungs ab)}}; 	&	\vec{p}=m\dot{\vec{r}}
-\end{flalign}
+\end{flalign*}
 %
 \paragraph{zeitliche Änderung:}
 %
-\begin{flalign}
+\begin{flalign*}
 \diff{}{t}\vec{L}=\underbrace{(\dot{\vec{r}}\times\vec{p})}_{0}+\vec{r}\times\dot{\vec{p}}=\vec{r}\times\vec{F}=:\underbrace{\vec{M}}_{\text{Drehmoment}}\\
 \ulcorner \diff{}{t}\vec{p}=\vec{F}, \diff{}{t}\vec{L}=\vec{M} \lrcorner
-\end{flalign}
+\end{flalign*}
 %
 \paragraph{für N-Teilchen: Gesamtdrehimpuls}
 %
-\begin{flalign}
+\begin{flalign*}
 \vec{L_{\ges}}=\sum_{i=1}^{N}\vec{L_i}=\sum_{i=1}^{N}m_i(\vec{r_i}\times\vec{r_i})
-\end{flalign}
+\end{flalign*}
 %
 \paragraph{Zeitliche Änderung:}
 %
-\begin{flalign}
+\begin{flalign*}
 	\diff{}{t}\vec{L}_{\ges}&=\sumni (\vec{r_i}\times\vec{F_i})=\sumni(\vec{r_i}\times\vec{F_i}^{(a)}+\sumij\vec{F_ij})\\
 	&\Rightarrow \diff{}{t}\vec{L_{\ges}}=\underbrace{\sumni\vec{M_i}^{(a)}}_{äußeres Drehmoment}+\sumij(\vec{r_i}\times\vec{F_{ij}})\\
 	&\Rightarrow \diff{}{t}\vec{L_{\ges}}=\vec{M}^{(a)}=\sumni\vec{M_i}^{(a)}
-\end{flalign}
+\end{flalign*}
 %
 \paragraph{Bemerkung:}
 %
 \begin{enumerate}
 	\item für geschlossene Systeme ($\vec{M_i}^{(a)}=0$) gilt \emph{Gesamtdrehimpulserhaltungssatz}:
-		\begin{flalign}
+		\begin{flalign*}
 			L_{ges}=\sumni \vec{L_i}=\const
-		\end{flalign}
+		\end{flalign*}
 	\item Zerlegung in Schwerpunkt und Relativteil: $\vec{r_i}=\vec{R_{CM}}+\vec{\varrho_i}$
-	\begin{flalign}
+	\begin{flalign*}
 		\vec{L}=\sumni (\vec{r_i}\times\vec{p_i})=\underbrace{\vec{R_{CM}}\times\vec{P_{CM}}}_{\vec{L}_{CM}}+\underbrace{\sumni(\vec{\varrho_i}\times\vec{p_i})}_{\vec{L}_{rel}}
-	\end{flalign}
+	\end{flalign*}
 	\item diese Erhaltungssätze für abgeschlossene N-Teilchensysteme gelten:\\
 	\begin{flalign*}
 		E & & \text{Energie} & & 1\times\\
@@ -262,8 +262,8 @@ $\left\{
 Sei ($O,\vec{e_1},\vec{e_2},\vec{e_3}$) IS\\
 $\rightarrow$ gehe über zu beschleunigtem (rotierendem) BS\\
 $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
-\begin{enumerate}
-	\item Einführung einer zeitabhängigen Rotation:
+\begin{description}
+	\desc{Einführung einer zeitabhängigen Rotation:} 
 	\begin{flalign*}
 		\vec{e_i}'(t)=R(t)\vec{e_i}\\
 		RR^T=\mathds{1}
@@ -279,9 +279,9 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 		\\
 		& \Rightarrow \diff{}{t}\vec{r}'=\vec{V_{BS}}+\sumni x_i'(t)(\dot{R}R^T)\vec{e_i}'
 	\end{flalign*}
-				\holine
+
 	\begin{flalign*}
-		(O,\{\vec{e_i}\})IS\rightarrow(O'(t),\{\vec{e_i}'(t)\})BS'
+		\overline{(O,\{\vec{e_i}\})IS\rightarrow(O'(t),\{\vec{e_i}'(t)\})BS'}
 	\end{flalign*}
 	\paragraph*{Beispiel}
 	\skizze{Karusselmit zeitabhängiger Drehung}
@@ -307,8 +307,40 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 	\emalign{
 		\diff{\vec{r}}{t}=\dot{\vec{r}'}+\vec{\Omega}\times\vec{r}'
 		}
-	
-\end{enumerate}
+	\begin{flalign*}
+		\diff{\vec{r}'}{t}=\diff{}{t}\sumni x_i'(t)\vec{e_i}(t)=\underbrace{\sumni \diff{x_i'(t)}{t}\vec{e_i}'(t)}_{\text{Geschwindigkeit gemessen in BS'=:$\dot{\vec{r}'}$}}+\sumni\vec{x_i}'(t)(\vec{\Omega}\times\vec{e_i}'(t))
+	\end{flalign*}
+	ODER:
+	\emalign{
+		\diff{}{t}...=\dot{...}+\vec{\Omega}x
+		}
+	Bedeutung von $\vec{\Omega}(t)
+	\left \{
+	\begin{tabular}{c}	
+	|$\vec{\Omega}$| \text{momentane Winkelgeschwindigkeit} \\
+	\text{Richtung der momentanen Drehachse}
+	\end{tabular}
+	\right \}$ der Drehung\\
+	\\
+	\\
+	Bsp.: Karusell $R(t)=\begin{pmatrix}
+	\cos \omega t	&	\sin \omega t	&	0	\\
+	-\sin \omega t	&	\cos \omega t	&	0	\\
+	0	&	0	&	1
+	\end{pmatrix}
+	\Rightarrow\Omega -\begin{pmatrix}
+	o\\
+	o\\
+	\omega
+	\end{pmatrix}
+	$ Drehachse\\
+	\\
+	Beschleunigung: \begin{flalign*}
+		&\diff{^2 \vec{r}'}{t} =\diff{}{t}(\dot{\vec{r}'}+\vec{\Omega}\times\vec{r}')\\
+		& \underbrace{=\ddot{\vec{r}'}+2\vec{\Omega}\times \dot{\vec{r}'}+\vec{\Omega}\times(\vec{\Omega}\times\vec{r}')+\dot{\vec{\Omega}}\times\vec{r}'	}_{\ddot{\vec{r}}...\text{ Beschleunigung }\dot{\vec{r}}...\text{ Geschwindigkeit }\vec{r}...\text{ Ortsvektor }}
+	\end{flalign*}
+	\desc{Beschleinigter Bezugspunkt $O'(t)$} 
+\end{description}
 
 
 
