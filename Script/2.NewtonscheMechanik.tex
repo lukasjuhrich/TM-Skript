@@ -29,17 +29,20 @@ $\vec{F_R}=-\alpha\dot{\vec{r}}; \alpha>0$ Reibungskoeffizient.
 \end{figure}
 $\vec{F}=cqQ\frac{\vec{r}-\vec{R}}{|r-R|^3}$\\
 $qQ<0$: anziehend\\
-$qQ>0$: abstoßende\\
+$qQ>0$: abstoßend\\
 $c$: Konstante, abhängig von der Einheit Ladung
 \end{enumerate}
 \end{description}
 \subsection{Arbeit und Energie}
 \begin{align*}
-m\ddot{\vec{r}}\dot{\vec{r}}=\vec{F}\dot{\vec{r}}\\
-\frac{d}{dt}(0,5m\dot{\vec{r}}^2)	\Rightarrow\int_{t_1}^{t_2}dt(\frac{d}{dt}(0,5m\dot{\vec{r}}^2))=\int_{t_1}^{t_2}dt\vec{F}\dot{\vec{r}}\\
-\Rightarrow T(t_2)-T(t_1)=\int_{t_1}^{t_2}\vec{F}\frac{d\vec{r}}{dt}dt =\int_{t_1}^{t_2}\vec{F}d\vec{r}(t)
+  m\ddot{\vec{r}}\:\dot{\vec{r}}&= \vec{F}\:\dot{\vec{r}}\\
+  \frac{d}{dt} \left( \frac{m}{2} \dot{\vec{r}}^2 \right)
+  &\Rightarrow\int_{t_1}^{t_2}dt(\frac{d}{dt}(\frac{m}{2} \dot{\vec{r}}^2))
+  = \int_{t_1}^{t_2}dt\vec{F}\dot{\vec{r}}\\
+  &\Rightarrow T(t_2)-T(t_1) = \int_{t_1}^{t_2}\vec{F}\frac{d\vec{r}}{dt}dt
+  = \int_{t_1}^{t_2}\vec{F}d\vec{r}(t)
 \end{align*}
-Entlang der Kurve$L$ $\vec{r}(t)$ mit $r(t_1)=r_1...$
+Entlang der Kurve $L$ $\vec{r}(t)$ mit $r(t_1)=r_1...$
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.4\textwidth]{Skizzen/Anhang2.jpg}
@@ -47,7 +50,7 @@ Entlang der Kurve$L$ $\vec{r}(t)$ mit $r(t_1)=r_1...$
 \caption{}
 \end{figure}
 Wir definieren die am Teilchen geleistete Arbeit entlang $L$ durch $W_e(r_1\rightarrow r_2)=\int_L \vec{F}d\vec{r}=\int_{t_1}^{t_2}\vec{F}\dot{\vec{r}}dt$\\
-Wir nennen ein Kraftfeld $\vec{F}$ \underline{konservativ}, wenn $W_e$ nur von $r_1$ und $r_2$, aber nicht vom Weg $r(t)$ abhängt.\\
+Wir nennen ein Kraftfeld $\vec{F}$ \emph{konservativ}, wenn $W_e$ nur von $r_1$ und $r_2$, aber nicht vom Weg $r(t)$ abhängt.\\
 \begin{description}
 \item[Theorem] $\vec{F}(\vec{r})$ konservativ $\Leftrightarrow$ es existiert ein skalares Potential $U(\vec{r})$ mit $\vec{F}(\vec{r})=-\nabla U(\vec{r})$
 \begin{align*}
@@ -60,6 +63,7 @@ $\Rightarrow$ $T(t_2)+U(r_2)=T(t_1)+U(r_1)$\\
 wir sehen für konservative Kräfte $F=-\nabla U(r)$ folgt:\\
 \underline{Energieerhaltung} $E=T+U=0,5m\dot{r}+U(r(t))=const$!\\
 denn $\frac{d}{dt}E=m\dot{r}\ddot{r}+\nabla U(r(t))\dot{r}(t)=\dot{r}(t)(m\ddot{r}+\nabla U)=0$ (Newton-Gleichung)
+
 \subsubsection{Beispiele konservativer Kraftfelder}
 $F=-\nabla U$\\
 \begin{enumerate}
@@ -340,10 +344,8 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 		& \underbrace{=\ddot{\vec{r}'}+2\vec{\Omega}\times \dot{\vec{r}'}+\vec{\Omega}\times(\vec{\Omega}\times\vec{r}')+\dot{\vec{\Omega}}\times\vec{r}'	}_{\ddot{\vec{r}}...\text{ Beschleunigung }\dot{\vec{r}}...\text{ Geschwindigkeit }\vec{r}...\text{ Ortsvektor }}
 	\end{flalign*}
 	\desc{Beschleinigter Bezugspunkt $O'(t)$} 
+
 \end{description}
-
-
-
 
 %TODO Einschub merles mitschriften
 
