@@ -1,0 +1,170 @@
+\section{Hamiltonsche Mechanik}
+
+$$
+q(t) \rightarrow (q(t), p(t))
+q\dot{q} 
+$$
+
+\subsection{Poisson-Klammer}
+\begin{itemize}
+\item Zwei Phasenraumfunktionen $f(q,p), g(q_\alpha,p_\alpha)$ wird
+  zugeordnet eine neue Phasenraumfunktion
+  $\left\{ f,g \right\}(q_\alpha,p_\alpha) := \sum\limits_\alpha
+  \left( \frac{\partial f}{\partial q_\alpha}\frac{\partial
+      q}{\partial p_\alpha} - \frac{\partial f}{\partial
+      p_\alpha}\frac{\partial q}{\partial q_\alpha} \right)$
+
+\item Diese hat zuvorkommende Eigenschaften:
+\begin{itemize}
+\item Zeitabhängigkeit: $A(q,p,t)$ entlang einer Trajektorie
+  bzw. Lösung der Hamiltonschen Bewegungsgleichung $A(q(t),p(t),t)$
+$$\frac{d}{dt} A = \left\{ A,H \right\} + \frac{\partial}{\partial t}A$$
+\item Insbesondere: $A(q,p)$ Erhaltungsgröße$\left\{ A,H \right\}=0$
+  Sehr praktisch, um zu prüfen, ob etwas eine Erhaltungsgröße ist.
+
+\item ($H(q,p)$ Erhaltungsgröße, da
+  $\forall f:\left\{ f,f \right\}=0$)
+\end{itemize}
+
+\item Eigenschaften der Poisson-Klammer:
+  \begin{enumerate}
+  \item\label{item:1} $\left\{ f,g \right\}=-\left\{ g,f \right\}$
+  \item\label{item:2}
+    $\left\{ f,g+h \right\}=\left\{ f,g \right\}+\left\{ f,h \right\}$
+  \item\label{item:3}
+    $\left\{ f,gh \right\}=g\left\{ f,h \right\} + \left\{ f,g
+    \right\}h$
+  \item\label{item:4}
+    $\left\{ f,\left\{ g,h \right\} \right\} + \left\{ h ,\left\{f,g
+      \right\} \right\} + \left\{ g\left\{ h,f \right\} \right\} = 0$
+    Bemerkung.: Ist $f$ und $g$ Erhaltungsgröße
+    $\Rightarrow \left\{ f,g \right\}$ Erhaltungsgröße
+  \item\label{item:5} Elementare Poisson-Klammern:
+    $\left\{ q,p \right\} = 1$,
+    $\left\{ q,q \right\}=\left\{ p,p \right\}=0$.
+
+  \item\label{item:6} Anwendung:
+    $\left\{ q^2,p \right\}q = q \left\{ q,p \right\} + \left\{ q,p
+    \right\}q = 2q$
+  \end{enumerate}
+
+\end{itemize}
+
+
+\subsection{Kanonische Transformationen}
+\begin{itemize}
+\item Bislang (Lagrange):
+  $\left\{ q_{\alpha}\right\}\rightarrow \left\{
+    Q_{\alpha}(q_1,\cdots,q_f,t \right\}$
+  \emph{Koordinaten}transformationen
+\item Jetzt (Hamilton):
+  $\left\{ q_{\alpha}, p_{\alpha} \right\} \rightarrow \left\{
+    Q_{\alpha}(q,p,t), P_{\alpha}(q,p,t) \right\}$
+  \emph{Phasenraum}transformationen
+\item Falls
+  $\dot{q_{\alpha}} = \frac{\partial H}{\partial p_{\alpha}}
+  \dot{p_{\alpha}} = -\frac{\partial H}{\partial q_{\alpha}}
+  \Rightarrow \dot{Q_{\alpha}} = \frac{\partial K}{\partial
+    P_{\alpha}} \dot{P_{\alpha}} = -\frac{\partial K}{\partial
+    Q_{\alpha}}$.
+  Ein solches $K$ existiert $\Leftrightarrow$ Transformation
+  $(q,p) \rightarrow(Q,P)$ Kanonisch
+\item Betrachte Phasenraumvolumina:
+  % \skizze{}
+\end{itemize}
+
+$
+F_S = \int dQ \int dP = \int dq \int dp
+%\left| 
+%\begin{align*}
+%del&/q & delP/q \\
+%delQ/p & delP/p
+%\end{align*} \right|
+$
+
+Phasenraumvolumen bleibt erhalten: $F_R = F_S \Leftrightarrow \left| \cdot \right| = 1 = \cdots = \left\{ Q,P \right\}$
+
+Definition: Eine Phasenraumtransformation $T: (q_{\alpha}, p_{\alpha} \rightarrow (Q_{\alpha}(q,p,t), P_{\alpha}(q,p,t))$ heißt \emph{kanonisch} $\Leftrightarrow$ das Phasenraumvolumen bleibt erhalten ($\Leftrightarrow V_R=V_S$).
+
+Es gilt: $-$ kanonisch
+$\Leftrightarrow \left\{ Q_{\alpha},P_{\beta} \right\} =
+\delta_{\alpha\beta} $
+$ \left( f-1:\quad \left\{ Q,P \right\}_{(q,p)} = 1 \right) $
+$\left\{ Q_{\alpha}, Q_{\beta} \right\} = 0$
+
+$\left\{ P_{\alpha}, P_{\beta} \right\} = 0$
+
+Alles dreis: für $\alpha,\beta = 1,2,\cdots,f$
+% todo format a bit nicer.
+$\rightarrow$
+
+Bemerkung zur Poisson-Klammer: es gilt auch $\left\{ Q,P \right\}_{(Q,P)} = 1$; dahinter steckt die \emph{Invarianz der Poisson-Klammer} unter kanonischen $T: \quad \left\{ f,g \right\}_{(q,p)} = \left\{ f,g \right\}_{(Q,P)} \qquad \left( f(q,p) \rightarrow f(q(Q,P), p(Q,P)) \right) $
+
+\subsection{(Form-)Invarianz der Hamiltonschen Bewegungsgleichungen unter kanonischen Transformationen}
+\begin{itemize}
+\item Ausgangspunkt:
+  $\dot{q_{\alpha}} = \frac{\partial H(q,p)}{\partial
+    p_{\alpha}};\quad \dot{p_{\alpha}} = - \frac{\partial H}{\partial
+    q_{\alpha}}$
+\item Betrachte kanonische.
+  $T:\quad (q,p) \mapsto (Q,P) = \left(
+    Q_{\alpha}(q_1,\cdots,q_f,p_1,\cdots,p_f ),
+    P_{\alpha}(q_1,\cdots,q_f,p_1,\cdots,p_f) \right)$
+\item Für Zeitabhängigkeit der $\left( Q_{\alpha}, P_{\alpha} \right)$
+  gilt
+  \begin{align*}
+  \dot{Q_{\alpha}} = \left\{ Q_{\alpha}, H \right\}_{(q,p)} \stackrel{kanT}{=} \left\{ Q_{\alpha}, H \right\}_{(Q,P)} = \frac{\partial Q_{\alpha}}{\partial Q_{\alpha}}\frac{\partial H}{\partial P_{\alpha}} - \frac{\partial Q_{\alpha}}{\partial P_{\alpha}}\frac{\partial H}{\partial Q_{\alpha}} = \frac{\partial H(q,p)}{\partial P_{\alpha}} = \frac{\partial K(Q,P)}{\partial P_{\alpha}}
+\end{align*}
+mit $K(Q,P) = H(q(Q,P),p(Q,P))$ genaus(?)
+$\dot{P_{\alpha}} = \left\{ P_{\alpha}, H \right\}_{(q,p)} = \left\{
+  P_{\alpha},H \right\}_{(Q,P)} = - \frac{\partial K(Q,P)}{\partial
+  Q_{\alpha}}$
+\item Wie erwartet und erwünscht: Die klassischen Bewegungsgleichungen
+  greifen!
+\end{itemize}
+
+\subsection{Erzeugend von kanonischen Transformationen}
+\begin{itemize}
+\item Ausgangspunkt: Hamiltonsches Prinzip
+  $\delta S \stackrel{!}{=} 0$
+\item
+  $S = \int\limits_{t_1}^{t_2} dt \left\{ \dot{q} p - H(q,p) \right\}
+  = \int\limits_{t_1}^{t_2}dt \left( \dot{Q}P - K(Q,P) \right) $
+\item Linke Seite
+  $pdq - Hdt = \underbrace{PdQ - K(Q,P) dt}_{\mathrm{Rechte Seite}} +
+  \underbrace{dF}_{\mathrm{Freiheit}}$
+\item Bei Variation liefern Beiträge des Randes keinen Beitrag!
+\item Hier ist
+  $F = F \left( q,p,\underbrace{Q}_{Q(q,p),P(q,p)},P,t \right)
+  \stackrel{?}{=} F(q,Q,t)$
+\item Fasse $F = F_1(q,Q,t)$ als Funktion dar alten und neuen
+  Koordinaten auf:
+  \begin{align*}
+\label{eq:2}
+dF_1 &= &\frac{\partial F_1}{\partial q}dq + \frac{ \partial F_1}{\partial Q}dQ + \frac{\partial F_1}{\partial t} dt\\
+\Rightarrow pdq - Fdt &= PdQ - Kdt + &\frac{\partial F_1}{\partial q}dq + \frac{ \partial F_1}{\partial Q}dQ + \frac{\partial F_1}{\partial t} dt
+\end{align*}
+
+\begin{align*}
+%\label{eq:1}
+p &= \frac{\partial F_1}{\partial q}\\
+P &= - \frac{\partial F_1}{\partial Q}\\
+K &= H + \frac{\partial F_1}{\partial t}
+\end{align*}
+\item Jede Funktion $F_1(q,Q,t)$ erzeugt durch (*) (TODO label) eine
+  kanonische Trafo.
+\item Entsprechend lassen sich kanonische Transformationen erzeugen
+  durch Erzeugende vom Typ
+  \begin{align*}
+F_2 = F_2(q,P,t) \Rightarrow &&p = -\frac{\partial f_2}{\partial q}, Q = \frac{\partial F_2}{\partial P}, k = H + \frac{\partial F_2}{\partial t}\\
+F_3 = F_3(q,P,t) \Rightarrow &&p = -\frac{\partial F_3}{\partial q}, Q = \frac{\partial F_3}{\partial P}, k = H + \frac{\partial F_3}{\partial t}\\
+F_4 = F_4(q,P,t) \Rightarrow &&p = -\frac{\partial F_4}{\partial q}, Q = \frac{\partial F_4}{\partial P}, k = H + \frac{\partial F_4}{\partial t}
+\end{align*}
+
+\end{itemize}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "Script"
+%%% End:
