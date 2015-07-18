@@ -1,0 +1,90 @@
+\section{Lagrange-Formalismus}
+\subsection{Lagrange I}
+\subsection{Lagrange II}
+Betrachte folgend ein System mit $f$ Freiheitsgraden.
+\begin{itemize}
+\item $(q_1,\cdots,q_f)$ – „Generalisierte
+  real.(?) Koordinaten“
+\item ${q_L}$, $L=1,\cdots,f$ generalisierte Koordinate (?)
+\item $(\dot{q_1}\cdots,\dot{q_f})$ „Verallgemeinerte
+  Geschwindigkeiten“
+\item Lagrange-Funktion: $L := T - U$\footnote{Anm.d.Skr.: im
+    Englischen Wird die Potentielle Energie häufig mit $V$ bezeichnet,
+    weswegen man oft (vor Allem auf Wikipedia) auf $L=T-V$ trifft.}
+\item
+  $L = L(\underbrace{q_1, \cdots, q_f}_f, \underbrace{\dot{q_1},
+    \cdots, \dot{q_f}}_{f}, t) = L(q_L, \dot{q_L}, t) = L(q, \dot{q},
+  t)$
+% TODO markieren
+\item Euler-Lagrange-Gleichungen:
+  \begin{align*} \frac{d}{dt}\frac{\partial L}{\partial
+      \dot{q_{\mathcal{L}}}} \frac{\partial L}{\partial
+      q_{\mathcal{L}}} &= 0 & \mathcal{L} \in \left\{ 1,\cdots,f
+    \right\}
+  \end{align*}
+\item Führt zu $f$ gekoppelten DGLs 2. Ordnung
+\end{itemize}
+
+\paragraph*{Beispiele:}
+\subparagraph{Teilchen in 3D unter Einfluss eines Ortsabhängigen  Potentials}
+\begin{itemize}
+\item \emph{Keine Zwangsbedingungen} $\Rightarrow$
+  $T = \frac{1}{2}m\dot\vec{r}$, $U=U \left( \vec{r} \right)$
+\item $f=3$
+\item Wir wählen \emph{kartesische Koordinaten}: $\left( q_1,q_2,q_3 \right) = (x,y,z)$
+\item $\Rightarrow$
+  $T = \frac{1}{2}m \left( \dot{x}^2 + \dot{y}^2 + \dot{z}^2 \right)$,
+  $U = U(x,y,z)$ mit
+  $\vec{r} = \vec{r}(q) = (x,y,z)^T$
+\item $\Rightarrow$ für $\mathcal{L}\in \left\{ 1,2,3 \right\}$
+  $L = L(x,y,z,\dot{x},\dot{y},\dot{z},t) = \frac{1}{2}m \left(
+    \dot{x}^2 + \dot{y}^2 + \dot{z}^2 \right) - U(x,y,z)$
+\item Euler-Lagrange-Gleichungen: Sei $\mathcal{L}=1$
+% TODO fix alignment
+\begin{align*}
+  \Leftrightarrow
+  \frac{d}{dt}\frac{\partial L}{\partial \dot{x}} \frac{\partial L}{\partial x} = 0\\
+  \frac{\partial L}{\partial \dot{x}} = m\dot{x}
+  \frac{\partial L}{\partial x}
+&= - \frac{\partial U}{\partial x}\\
+  \frac{d}{dt}m\dot{x} + \frac{\partial U}{\partial x}
+&= 0
+  \Leftrightarrow m \ddot{x} = - \frac{\partial U}{\partial x}
+\end{align*}
+\item Entsprechender Ansatz für $y,z$ führt insgesamt zu $m\ddot\vec{r}=-\nabla U$
+\item Wie erwartet: Newton-Ansatz bestätigt!
+\end{itemize}
+
+\subparagraph{Mit Zwangsbedingungen: Mehre Beispiele}
+\begin{enumerate}
+
+\item\label{item:8} Rolle
+
+\skizze{skizze}
+
+\begin{itemize}
+\item Hier: $f=1$, da (1D+1D)-Bewegung gekoppelt
+\item Wähle Höhe $q_1=h$ (alternativ: Winkel $\phi$) als
+  generalisierte Koordinate
+\item $L = L (h,\dot{h}) = T-U = T_{Rolle}+T_{Masse}-mgh$
+\begin{align*}
+  T_{Masse} &= \frac{1}{2}m\dot{h}^2\\
+  T_{Rolle} &= \frac{1}{2}\theta\dot{\phi}^2,
+            &\phi = \phi(h) = 2\pi \frac{h}{2\pi R} = \frac{h}{R};
+            &&\dot{\phi}= \frac{\dot{h}}{R}\\
+  \Rightarrow
+  L(h,\dot{h}) &= \frac{1}{2}\left( \frac{1}{2R^2}\theta + m \right)\dot{h}^2 + mgh
+\end{align*}
+
+\end{itemize}
+
+\item\label{item:7} 
+
+\end{enumerate}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "Script"
+%%% End:
