@@ -8,19 +8,21 @@ $$
 \subsection{Poisson-Klammer}
 \begin{itemize}
 \item Zwei Phasenraumfunktionen $f(q,p), g(q_\alpha,p_\alpha)$ wird
-  zugeordnet eine neue Phasenraumfunktion
+  eine neue Phasenraumfunktion
   $\left\{ f,g \right\}(q_\alpha,p_\alpha) := \sum\limits_\alpha
   \left( \frac{\partial f}{\partial q_\alpha}\frac{\partial
       q}{\partial p_\alpha} - \frac{\partial f}{\partial
       p_\alpha}\frac{\partial q}{\partial q_\alpha} \right)$
+  zugeordnet
 
 \item Diese hat zuvorkommende Eigenschaften:
 \begin{itemize}
 \item Zeitabhängigkeit: $A(q,p,t)$ entlang einer Trajektorie
   bzw. Lösung der Hamiltonschen Bewegungsgleichung $A(q(t),p(t),t)$
 $$\frac{d}{dt} A = \left\{ A,H \right\} + \frac{\partial}{\partial t}A$$
-\item Insbesondere: $A(q,p)$ Erhaltungsgröße$\left\{ A,H \right\}=0$
-  Sehr praktisch, um zu prüfen, ob etwas eine Erhaltungsgröße ist.
+\item Insbesondere: $A(q,p)$ Erhaltungsgröße
+  $\Rightarrow \left\{ A,H \right\}=0$.  Sehr praktisch, um zu prüfen,
+  ob etwas eine Erhaltungsgröße ist.
 
 \item ($H(q,p)$ Erhaltungsgröße, da
   $\forall f:\left\{ f,f \right\}=0$)
@@ -67,63 +69,88 @@ $$\frac{d}{dt} A = \left\{ A,H \right\} + \frac{\partial}{\partial t}A$$
   \Rightarrow \dot{Q_{\alpha}} = \frac{\partial K}{\partial
     P_{\alpha}} \dot{P_{\alpha}} = -\frac{\partial K}{\partial
     Q_{\alpha}}$.
+
   Ein solches $K$ existiert $\Leftrightarrow$ Transformation
   $(q,p) \rightarrow(Q,P)$ Kanonisch
 \item Betrachte Phasenraumvolumina:
-  % \skizze{}
-\end{itemize}
+  \skizze{skizze}
 
-$
-F_S = \int dQ \int dP = \int dq \int dp
-%\left| 
-%\begin{align*}
-%del&/q & delP/q \\
-%delQ/p & delP/p
-%\end{align*} \right|
-$
+\begin{align*}
+F_S = \int d Q \int dP = \int dq \int dp \begin{vmatrix}
+\frac{\partial Q}{\partial q} & \frac{\partial P}{\partial p} \\
+\frac{\partial Q}{\partial p} & \frac{\partial P}{\partial q} \\
+\end{vmatrix}
+\end{align*}
 
-Phasenraumvolumen bleibt erhalten: $F_R = F_S \Leftrightarrow \left| \cdot \right| = 1 = \cdots = \left\{ Q,P \right\}$
+\item Phasenraumvolumen bleibt erhalten:
+  $F_R = F_S \Leftrightarrow \left| \cdot \right| = 1 = \cdots =
+  \left\{ Q,P \right\}$
 
-Definition: Eine Phasenraumtransformation $T: (q_{\alpha}, p_{\alpha} \rightarrow (Q_{\alpha}(q,p,t), P_{\alpha}(q,p,t))$ heißt \emph{kanonisch} $\Leftrightarrow$ das Phasenraumvolumen bleibt erhalten ($\Leftrightarrow V_R=V_S$).
+\item Definition: Eine Phasenraumtransformation
+  $T: (q_{\alpha}, p_{\alpha} \rightarrow (Q_{\alpha}(q,p,t),
+  P_{\alpha}(q,p,t))$
+  heißt \emph{kanonisch} $\Leftrightarrow$ das Phasenraumvolumen
+  bleibt erhalten ($\Leftrightarrow V_R=V_S$).
 
-Es gilt: $-$ kanonisch
-$\Leftrightarrow \left\{ Q_{\alpha},P_{\beta} \right\} =
-\delta_{\alpha\beta} $
-$ \left( f-1:\quad \left\{ Q,P \right\}_{(q,p)} = 1 \right) $
-$\left\{ Q_{\alpha}, Q_{\beta} \right\} = 0$
+\item Es gilt: $-$ kanonisch
+  $\Leftrightarrow \left\{ Q_{\alpha},P_{\beta} \right\} =
+  \delta_{\alpha\beta} $
+  $ \left( f-1:\quad \left\{ Q,P \right\}_{(q,p)} = 1 \right) $
+  $\left\{ Q_{\alpha}, Q_{\beta} \right\} = 0$
 
 $\left\{ P_{\alpha}, P_{\beta} \right\} = 0$
 
-Alles dreis: für $\alpha,\beta = 1,2,\cdots,f$
-% todo format a bit nicer.
-$\rightarrow$
+\item Alles dreis: für $\alpha,\beta = 1,2,\cdots,f$
+  % todo format a bit nicer.
+  $\rightarrow$ (Hier kommt irgendwas hin, keine Ahnung was)
 
-Bemerkung zur Poisson-Klammer: es gilt auch $\left\{ Q,P \right\}_{(Q,P)} = 1$; dahinter steckt die \emph{Invarianz der Poisson-Klammer} unter kanonischen $T: \quad \left\{ f,g \right\}_{(q,p)} = \left\{ f,g \right\}_{(Q,P)} \qquad \left( f(q,p) \rightarrow f(q(Q,P), p(Q,P)) \right) $
+\item Bemerkung zur Poisson-Klammer: es gilt auch
+  $\left\{ Q,P \right\}_{(Q,P)} = 1$; dahinter steckt die
+  \emph{Invarianz der Poisson-Klammer} unter kanonischen
+  Transformationen
+\begin{align*}
+T: d \left\{ f,g \right\}_{(q,p)} = \left\{ f,g \right\}_{(Q,P)}
+&&\left(f(q,p) \rightarrow f(q(Q,P), p(Q,P)) \right) 
+\end{align*}
+\end{itemize}
 
-\subsection{(Form-)Invarianz der Hamiltonschen Bewegungsgleichungen unter kanonischen Transformationen}
+
+\subsection{(Form-)Invarianz der Hamiltonschen Bewegungsgleichungen
+  unter kanonischen Transformationen}
 \begin{itemize}
 \item Ausgangspunkt:
   $\dot{q_{\alpha}} = \frac{\partial H(q,p)}{\partial
     p_{\alpha}};\quad \dot{p_{\alpha}} = - \frac{\partial H}{\partial
     q_{\alpha}}$
-\item Betrachte kanonische.
-  $T:\quad (q,p) \mapsto (Q,P) = \left(
+\item Betrachte die kanonische Transformation
+  \begin{align*}
+    T:\quad (q,p) \mapsto (Q,P) = \left(
     Q_{\alpha}(q_1,\cdots,q_f,p_1,\cdots,p_f ),
-    P_{\alpha}(q_1,\cdots,q_f,p_1,\cdots,p_f) \right)$
+    P_{\alpha}(q_1,\cdots,q_f,p_1,\cdots,p_f) \right)
+  \end{align*}
 \item Für Zeitabhängigkeit der $\left( Q_{\alpha}, P_{\alpha} \right)$
   gilt
   \begin{align*}
-  \dot{Q_{\alpha}} = \left\{ Q_{\alpha}, H \right\}_{(q,p)} \stackrel{kanT}{=} \left\{ Q_{\alpha}, H \right\}_{(Q,P)} = \frac{\partial Q_{\alpha}}{\partial Q_{\alpha}}\frac{\partial H}{\partial P_{\alpha}} - \frac{\partial Q_{\alpha}}{\partial P_{\alpha}}\frac{\partial H}{\partial Q_{\alpha}} = \frac{\partial H(q,p)}{\partial P_{\alpha}} = \frac{\partial K(Q,P)}{\partial P_{\alpha}}
+    \dot{Q_{\alpha}}
+    &= \left\{ Q_{\alpha}, H \right\}_{(q,p)}
+      \stackrel{\mathclap{\text{kanT}}}{=} \left\{ Q_{\alpha}, H \right\}_{(Q,P)}\\
+    &= \frac{\partial Q_{\alpha}}{\partial Q_{\alpha}}\frac{\partial H}{\partial P_{\alpha}}
+      - \frac{\partial Q_{\alpha}}{\partial P_{\alpha}}\frac{\partial H}{\partial Q_{\alpha}}
+      = \frac{\partial H(q,p)}{\partial P_{\alpha}}\\
+    &= \frac{\partial K(Q,P)}{\partial P_{\alpha}}
+  \end{align*}
+\item Mit $K(Q,P) = H(q(Q,P),p(Q,P))$ ist genauso:
+  \begin{align*}
+    \dot{P_{\alpha}} = \left\{ P_{\alpha}, H \right\}_{(q,p)} = \left\{
+    P_{\alpha},H \right\}_{(Q,P)} = - \frac{\partial K(Q,P)}{\partial
+    Q_{\alpha}}
 \end{align*}
-mit $K(Q,P) = H(q(Q,P),p(Q,P))$ genaus(?)
-$\dot{P_{\alpha}} = \left\{ P_{\alpha}, H \right\}_{(q,p)} = \left\{
-  P_{\alpha},H \right\}_{(Q,P)} = - \frac{\partial K(Q,P)}{\partial
-  Q_{\alpha}}$
+
 \item Wie erwartet und erwünscht: Die klassischen Bewegungsgleichungen
   greifen!
 \end{itemize}
 
-\subsection{Erzeugend von kanonischen Transformationen}
+\subsection{Erzeugende von kanonischen Transformationen}
 \begin{itemize}
 \item Ausgangspunkt: Hamiltonsches Prinzip
   $\delta S \stackrel{!}{=} 0$
@@ -131,11 +158,11 @@ $\dot{P_{\alpha}} = \left\{ P_{\alpha}, H \right\}_{(q,p)} = \left\{
   $S = \int\limits_{t_1}^{t_2} dt \left\{ \dot{q} p - H(q,p) \right\}
   = \int\limits_{t_1}^{t_2}dt \left( \dot{Q}P - K(Q,P) \right) $
 \item Linke Seite
-  $pdq - Hdt = \underbrace{PdQ - K(Q,P) dt}_{\mathrm{Rechte Seite}} +
-  \underbrace{dF}_{\mathrm{Freiheit}}$
+  $pdq - Hdt = \underbrace{PdQ - K(Q,P) dt}_{\mathclap{\text{Rechte Seite}}} +
+  \underbrace{dF}_{\mathclap{\text{Freiheit}}}$
 \item Bei Variation liefern Beiträge des Randes keinen Beitrag!
 \item Hier ist
-  $F = F \left( q,p,\underbrace{Q}_{Q(q,p),P(q,p)},P,t \right)
+  $F = F ( q,p,\underbrace{Q}_{\mathclap{Q(q,p),P(q,p)}},P,t )
   \stackrel{?}{=} F(q,Q,t)$
 \item Fasse $F = F_1(q,Q,t)$ als Funktion dar alten und neuen
   Koordinaten auf:
@@ -152,11 +179,11 @@ P &= - \frac{\partial F_1}{\partial Q}\\
 K &= H + \frac{\partial F_1}{\partial t}
 \end{align*}
 \item Jede Funktion $F_1(q,Q,t)$ erzeugt durch (*) (TODO label) eine
-  kanonische Trafo.
+  kanonische Transformation.
 \item Entsprechend lassen sich kanonische Transformationen erzeugen
   durch Erzeugende vom Typ
   \begin{align*}
-F_2 = F_2(q,P,t) \Rightarrow &&p = -\frac{\partial f_2}{\partial q}, Q = \frac{\partial F_2}{\partial P}, k = H + \frac{\partial F_2}{\partial t}\\
+F_2 = F_2(q,P,t) \Rightarrow &&p = -\frac{\partial F_2}{\partial q}, Q = \frac{\partial F_2}{\partial P}, k = H + \frac{\partial F_2}{\partial t}\\
 F_3 = F_3(q,P,t) \Rightarrow &&p = -\frac{\partial F_3}{\partial q}, Q = \frac{\partial F_3}{\partial P}, k = H + \frac{\partial F_3}{\partial t}\\
 F_4 = F_4(q,P,t) \Rightarrow &&p = -\frac{\partial F_4}{\partial q}, Q = \frac{\partial F_4}{\partial P}, k = H + \frac{\partial F_4}{\partial t}
 \end{align*}
