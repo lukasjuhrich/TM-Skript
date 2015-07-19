@@ -64,21 +64,154 @@ Betrachte folgend ein System mit $f$ Freiheitsgraden.
 
 \begin{itemize}
 \item Hier: $f=1$, da (1D+1D)-Bewegung gekoppelt
-\item Wähle Höhe $q_1=h$ (alternativ: Winkel $\phi$) als
+\item Wähle Höhe $q_1=h$ (alternativ: Winkel $\varphi$) als
   generalisierte Koordinate
 \item $L = L (h,\dot{h}) = T-U = T_{Rolle}+T_{Masse}-mgh$
 \begin{align*}
   T_{Masse} &= \frac{1}{2}m\dot{h}^2\\
-  T_{Rolle} &= \frac{1}{2}\theta\dot{\phi}^2,
-            &\phi = \phi(h) = 2\pi \frac{h}{2\pi R} = \frac{h}{R};
-            &&\dot{\phi}= \frac{\dot{h}}{R}\\
+  T_{Rolle} &= \frac{1}{2}\theta\dot{\varphi}^2,
+            &\varphi = \varphi(h) = 2\pi \frac{h}{2\pi R} = \frac{h}{R};
+            &&\dot{\varphi}= \frac{\dot{h}}{R}\\
   \Rightarrow
   L(h,\dot{h}) &= \frac{1}{2}\left( \frac{1}{2R^2}\theta + m \right)\dot{h}^2 + mgh
 \end{align*}
 
 \end{itemize}
 
-\item\label{item:7} 
+\item\label{item:7} Gedöns % TODO add description
+\skizze{skizze}
+
+
+$f=2$. z.B. $(q_1, q_2) = (x,y)$. Besser: $(q_1,q_2) = (\rho,\varphi)$ mit
+\begin{align*}
+\rho &= \sqrt{x^2+y^2} \\
+x &= \rho \cos \varphi \\
+y &= \rho \sin \varphi
+&\Rightarrow L = L \left( \rho, \varphi, \dot{\rho} ,\dot{\varphi} \right)
+\end{align*}
+
+\item\label{item:9} Masse mit Loch auf Stange
+\skizze{skizze}
+
+Hier $f=2$ z.B. $(q_1,q_2) = (x,\varphi)$
+
+% TODO box or sth
+\begin{description}
+\item[Zur Erinnerung]: In Lagrange I
+\begin{align*}
+  m_1 \ddot{\vec{r_1}} &= \vec{F_1} + \vec{Z_1} \\
+  2 = f &= 3n - k = 6-4
+\end{align*}
+($f=6$ wenn nicht gekoppelt).
+
+$\Rightarrow$ 4 Zwangsbedingungen:
+\begin{align*}
+  g_1 \left( \vec{r_1}, \vec{r_2} \right)
+  &= z_1 = 0 \\
+  g_2 \left( \vec{r_1}, \vec{r_2} \right)
+  &= y_1 = 0 \\
+  g_3 \left( \vec{r_1}, \vec{r_2} \right)
+  &= y_2 = 0 \\
+  g_4 \left( \vec{r_1}, \vec{r_2} \right)
+  &= \underbrace{\left( \vec{r_1-r_2} \right)^2}_{\text{Abstand}}-l^2 = 0 \\
+\end{align*}
+\begin{align*}
+  \Rightarrow \vec{z_1} = \sum\limits_{m=1}^4\lambda_m(t)
+  \vec{\nabla}_ig_m(\vec{r_1}, \vec{r_2}) \quad i = 1,2
+\end{align*}
+\item[Lagrange II] $f=2$; $(q_1,q_2)=(x,\varphi)$
+\begin{align*}
+  \vec{r_1} &= \vec{r_1}(x,\varphi) = r_1(x)
+  &&= \left( \begin{matrix}x\\0\\0 \end{matrix} \right)
+            &&\text{für}\:m_1\\
+  \vec{r_2} &= \vec{r_2}(x,\varphi)
+  &&= \left( \begin{matrix}x + l\sin\varphi\\0\\-l\cos\varphi \end{matrix} \right)
+            &&\text{für Pendelmasse}\\
+\end{align*}
+\begin{align*}
+  T &= \frac{1}{2}m_1\vec{r}_1^2 + \frac{1}{2}m_2\vec{r}_2^2
+  &= T \left( x,\varphi,\dot{x},\dot{\varphi} \right)\\
+    &\dot\vec{r}_1 = \left(\begin{matrix}\dot{x}\\0\\0\end{matrix}\right)
+  \qquad\dot\vec{r}_2 = \left(\begin{matrix}\dot{x}
+      + l\dot{\varphi}\cos\varphi\\0\\l\dot{\varphi}\sin\varphi\end{matrix}\right)\\
+  T &= \frac{1}{2}m_1\dot{x}^2
+      + \frac{1}{2}m_2 \left( (\dot{x}+l\dot{\varphi}\cos\varphi)^2 + l^2\varphi^2\sin^2\varphi \right)
+  &= T \left( x,\varphi,\dot{x},\dot{\varphi} \right)\\
+    &= \frac{1}{2}(m_1+m_2)\dot{x}^2 + m_2l\dot{x}\dot{\varphi}\cos\varphi
+      + \frac{1}{2}ml^2\dot{\varphi}^2\\
+  &U(\vec{r}_1,\vec{r}_2) = mgz_2 = -mgl\cos\varphi = U(x,\varphi)
+  &L = L(x,\varphi,\dot{x},\dot{\varphi})\\
+\end{align*}
+
+\item[Bewegungsgleichung:]
+  $\frac{d}{dt}\frac{\partial L}{\partial \dot{x}} - \frac{\partial
+    L}{\partial x} = 0$. 
+  Hier:
+\begin{align*}
+  \frac{\partial L}{\partial \dot{x}}
+  &= (m_1+m_2)\dot{x}+m_2l\dot{\varphi}\cos\varphi\\
+  \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}
+  &= (m_1+m_2)\ddot{x} + m_2l\ddot{\varphi}\cos\varphi\\
+\end{align*}
+entsprechend
+\begin{equation*}
+\frac{d}{dt}\frac{\partial L}{\partial \dot{\varphi}}-\frac{\partial L}{\partial \varphi} = 0
+\qquad \ddot{\varphi} = 0
+\end{equation*}
+mit $\omega^2=\frac{m_1+m_2}{m_1}\frac{l}{g}$
+
+$\Rightarrow$ für kleinere Auslenkungen $\varphi<<1$: $\ddot{\varphi}+\omega^2\varphi=0$
+
+\item[Bemerkungen]
+\begin{itemize}
+\item Lagrange II sehr nützlich. Beweis: klar.
+\item Euler-Lagrange-Gleichungen invariant unter
+  Koordinatentransformation
+  \begin{align*}
+    \vec{r}_i(q_1,\cdots,q_p,t)
+    &\leftrightarrow \vec{r}_i(Q_1,\cdots,Q_p,t)\\
+    \frac{d}{dt}\frac{\partial L}{\partial \dot{q}_k}-\frac{\partial L}{\partial q_L} = 0
+    &\Leftrightarrow \frac{d}{dt} \frac{\partial L^{\prime}}{\partial \dot{Q}_{\beta}}
+      - \frac{\partial L^{\prime}}{\partial Q_{\beta}}
+  \end{align*}
+  Wobei
+  $L(q,\dot{q},t) f L^{\prime}(Q,\dot{Q},t- =
+  L^{\prime}(Q_{\beta}(q_1,\cdots,q_p),\dot{Q}_{\beta}(q_1,\cdots,q_p,
+  \dot{q}_1,\cdots,\dot{q}_p),t)$
+
+  Transformation
+  $\left\{ q_L \right\} \rightarrow \left\{ Q_{\beta} \right\}$;
+  $Q_{\beta}=Q_{\beta}(q_1,\cdots,q_p)$, $\beta = 1,\cdots,f$
+
+  Im Gegensatz zu Newton!  Es gilt
+  $m\ddot{x} = - \frac{\partial U}{\partial x}$ bei Übergang zu
+  Kugelkoordinaten $(x,y,z)\rightarrow(r,\theta,\varphi)$ es gilt
+  \emph{nicht}
+  $m\ddot{\varphi} \theta \not= - \frac{\partial U}{\partial \varphi}$ Widersp.
+\item Bisher $\vec{F}_i = \vec{\nabla}_iU(\vec{r}_1,\cdot,\vec{r}_N)$
+  analog für verallgemeinerte Kräfte $\vec{K}_i$, für die gilt:
+  \begin{align*}
+    \vec{K}_i &= -\vec{\nabla}_{\vec{r}_i}\tilde{U}(\vec{r},\dot\vec{r})
+                + \frac{d}{dt}\vec{\nabla}_{\dot\vec{r}_i} \tilde{U}(\vec{r},\dot\vec{r})
+  \end{align*}
+  es folgt wieder
+  $m\ddot\vec{r}_i = \vec{K}_{i} \Leftrightarrow
+  \frac{d}{dt}\frac{\partial L}{\partial q_L} = 0, \qquad L = T -
+  \tilde{U}(\vec{r},\dot\vec{r})$
+
+  \begin{description}
+  \item[Beispiel] Loretzkraft:
+    \begin{align*}
+      \tilde{U}(\vec{r},\vec{\dot{r}})
+      = e \underbrace{\phi(\vec{r},t)}_{\mathclap{\text{Skalares Pot.}}} - e
+      \frac{\dot\vec{r}}{c} \cdot
+      \underbrace{\vec{A}(\vec{r},t)}_{\mathclap{\text{Vektorpot.}}} 
+    \end{align*}
+  \end{description}
+
+\end{itemize}
+
+\end{description}
 
 \end{enumerate}
 
