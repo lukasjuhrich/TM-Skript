@@ -6,7 +6,7 @@
 \subsection{Newtonsche Bewegungs-Gleichung}
 zunächst phänomenologisch; Erfahrung: durch angabe des Anfangsortes $\vec{r}(t_0)=\vec{r}$ und der Anfangsgeschwindigkeit $\dot{\vec{r}}(t_0)=\vec{v_0}$ die Bahnkurve $\vec{r}(t)$ festgelegt ist $\Rightarrow$ wir erwarten eine Relation $\ddot{\vec{r}}(t) \sim \vec{F}(\vec{r},\dot{\vec{r}})$, gewöhnliche Differentialgleichung 2. Ordnung zur Bestimmung der Bahnkurve $\vec{r}(t)$ (Dynamik)\\
 $\rightarrow$ Newton (2. Newton-Gesetz); Impuls $\vec{p}=v\vec{v}=\dot{\vec{r}}$\\
-$\frac{d}{dt}\vec{p}=\vec{F}$, bei konstanter (träger) Masse $m\ddot{\vec{r}}=\vec{F}$ wobei $\vec{F}$ die Kraft ist, die auf den Körper wirkt.\\
+$\diff{}{t}\vec{p}=\vec{F}$, bei konstanter (träger) Masse $m\ddot{\vec{r}}=\vec{F}$ wobei $\vec{F}$ die Kraft ist, die auf den Körper wirkt.\\
 \begin{description}
 \item[Beispiel:]
 \begin{enumerate}
@@ -36,10 +36,10 @@ $c$: Konstante, abhängig von der Einheit Ladung
 \subsection{Arbeit und Energie}
 \begin{align*}
   m\ddot{\vec{r}}\:\dot{\vec{r}}&= \vec{F}\:\dot{\vec{r}}\\
-  \frac{d}{dt} \left( \frac{m}{2} \dot{\vec{r}}^2 \right)
-  &\Rightarrow\int_{t_1}^{t_2}dt(\frac{d}{dt}(\frac{m}{2} \dot{\vec{r}}^2))
+  \diff{}{t} \left( \frac{m}{2} \dot{\vec{r}}^2 \right)
+  &\Rightarrow\int_{t_1}^{t_2}dt(\diff{}{t}(\frac{m}{2} \dot{\vec{r}}^2))
   = \int_{t_1}^{t_2}dt\vec{F}\dot{\vec{r}}\\
-  &\Rightarrow T(t_2)-T(t_1) = \int_{t_1}^{t_2}\vec{F}\frac{d\vec{r}}{dt}dt
+  &\Rightarrow T(t_2)-T(t_1) = \int_{t_1}^{t_2}\vec{F}\diff{\vec{r}}{t}dt
   = \int_{t_1}^{t_2}\vec{F}d\vec{r}(t)
 \end{align*}
 Entlang der Kurve $L$ $\vec{r}(t)$ mit $r(t_1)=r_1...$
@@ -62,7 +62,7 @@ Für konservative Kraftfelder gilt: $\int_L F(r)dr=-U(r_2)+U(r_1)=W(r_1\rightarr
 $\Rightarrow$ $T(t_2)+U(r_2)=T(t_1)+U(r_1)$\\
 wir sehen für konservative Kräfte $F=-\nabla U(r)$ folgt:\\
 \underline{Energieerhaltung} $E=T+U=0,5m\dot{r}+U(r(t))=const$!\\
-denn $\frac{d}{dt}E=m\dot{r}\ddot{r}+\nabla U(r(t))\dot{r}(t)=\dot{r}(t)(m\ddot{r}+\nabla U)=0$ (Newton-Gleichung)
+denn $\diff{}{t}E=m\dot{r}\ddot{r}+\nabla U(r(t))\dot{r}(t)=\dot{r}(t)(m\ddot{r}+\nabla U)=0$ (Newton-Gleichung)
 
 \subsubsection{Beispiele konservativer Kraftfelder}
 $F=-\nabla U$\\

@@ -17,10 +17,9 @@ Betrachte folgend ein System mit $f$ Freiheitsgraden.
   t)$
 % TODO markieren
 \item Euler-Lagrange-Gleichungen:
-  \begin{align*} \frac{d}{dt}\frac{\partial L}{\partial
-      \dot{q_{\mathcal{L}}}} \frac{\partial L}{\partial
-      q_{\mathcal{L}}} &= 0 & \mathcal{L} \in \left\{ 1,\cdots,f
-    \right\}
+  \begin{align*} \diff{}{t}\pdiff{L}{\dot{q_{\mathcal{L}}}}
+    \pdiff{L}{q_{\mathcal{L}}} &= 0 & \mathcal{L} \in
+    \left\{ 1,\cdots,f \right\}
   \end{align*}
 \item Führt zu $f$ gekoppelten DGLs 2. Ordnung
 \end{itemize}
@@ -43,13 +42,13 @@ Betrachte folgend ein System mit $f$ Freiheitsgraden.
 % TODO fix alignment
 \begin{align*}
   \Leftrightarrow
-  \frac{d}{dt}\frac{\partial L}{\partial \dot{x}} \frac{\partial L}{\partial x} = 0\\
-  \frac{\partial L}{\partial \dot{x}} = m\dot{x}
-  \frac{\partial L}{\partial x}
-&= - \frac{\partial U}{\partial x}\\
-  \frac{d}{dt}m\dot{x} + \frac{\partial U}{\partial x}
+  \diff{}{t}\pdiff{L}{\dot{x}} \pdiff{L}{x} = 0\\
+  \pdiff{L}{\dot{x}} = m\dot{x}
+  \pdiff{L}{x}
+&= - \pdiff{U}{x}\\
+  \diff{}{t}m\dot{x} + \pdiff{U}{x}
 &= 0
-  \Leftrightarrow m \ddot{x} = - \frac{\partial U}{\partial x}
+  \Leftrightarrow m \ddot{x} = - \pdiff{U}{x}
 \end{align*}
 \item Entsprechender Ansatz für $y,z$ führt insgesamt zu $m\ddot\vec{r}=-\nabla U$
 \item Wie erwartet: Newton-Ansatz bestätigt!
@@ -144,18 +143,18 @@ $\Rightarrow$ 4 Zwangsbedingungen:
 \end{align*}
 
 \item[Bewegungsgleichung:]
-  $\frac{d}{dt}\frac{\partial L}{\partial \dot{x}} - \frac{\partial
-    L}{\partial x} = 0$. 
+  $\diff{}{t}\pdiff{L}{\dot{x}} - \pdiff{
+    L}{x} = 0$.
   Hier:
 \begin{align*}
-  \frac{\partial L}{\partial \dot{x}}
+  \pdiff{L}{\dot{x}}
   &= (m_1+m_2)\dot{x}+m_2l\dot{\varphi}\cos\varphi\\
-  \frac{d}{dt}\frac{\partial L}{\partial \dot{x}}
+  \diff{}{t}\pdiff{L}{\dot{x}}
   &= (m_1+m_2)\ddot{x} + m_2l\ddot{\varphi}\cos\varphi\\
 \end{align*}
 entsprechend
 \begin{equation*}
-\frac{d}{dt}\frac{\partial L}{\partial \dot{\varphi}}-\frac{\partial L}{\partial \varphi} = 0
+\diff{}{t}\pdiff{L}{\dot{\varphi}}-\pdiff{L}{\varphi} = 0
 \qquad \ddot{\varphi} = 0
 \end{equation*}
 mit $\omega^2=\frac{m_1+m_2}{m_1}\frac{l}{g}$
@@ -170,9 +169,9 @@ $\Rightarrow$ für kleinere Auslenkungen $\varphi<<1$: $\ddot{\varphi}+\omega^2\
   \begin{align*}
     \vec{r}_i(q_1,\cdots,q_p,t)
     &\leftrightarrow \vec{r}_i(Q_1,\cdots,Q_p,t)\\
-    \frac{d}{dt}\frac{\partial L}{\partial \dot{q}_k}-\frac{\partial L}{\partial q_L} = 0
-    &\Leftrightarrow \frac{d}{dt} \frac{\partial L^{\prime}}{\partial \dot{Q}_{\beta}}
-      - \frac{\partial L^{\prime}}{\partial Q_{\beta}}
+    \diff{}{t}\pdiff{L}{\dot{q}_k}-\pdiff{L}{q_L} = 0
+    &\Leftrightarrow \diff{}{t} \pdiff{L^{\prime}}{\dot{Q}_{\beta}}
+      - \pdiff{L^{\prime}}{Q_{\beta}}
   \end{align*}
   Wobei
   $L(q,\dot{q},t) f L^{\prime}(Q,\dot{Q},t- =
@@ -184,19 +183,19 @@ $\Rightarrow$ für kleinere Auslenkungen $\varphi<<1$: $\ddot{\varphi}+\omega^2\
   $Q_{\beta}=Q_{\beta}(q_1,\cdots,q_p)$, $\beta = 1,\cdots,f$
 
   Im Gegensatz zu Newton!  Es gilt
-  $m\ddot{x} = - \frac{\partial U}{\partial x}$ bei Übergang zu
+  $m\ddot{x} = - \pdiff{U}{x}$ bei Übergang zu
   Kugelkoordinaten $(x,y,z)\rightarrow(r,\theta,\varphi)$ es gilt
   \emph{nicht}
-  $m\ddot{\varphi} \theta \not= - \frac{\partial U}{\partial \varphi}$ Widersp.
+  $m\ddot{\varphi} \theta \not= - \pdiff{U}{\varphi}$ Widersp.
 \item Bisher $\vec{F}_i = \vec{\nabla}_iU(\vec{r}_1,\cdot,\vec{r}_N)$
   analog für verallgemeinerte Kräfte $\vec{K}_i$, für die gilt:
   \begin{align*}
     \vec{K}_i &= -\vec{\nabla}_{\vec{r}_i}\tilde{U}(\vec{r},\dot\vec{r})
-                + \frac{d}{dt}\vec{\nabla}_{\dot\vec{r}_i} \tilde{U}(\vec{r},\dot\vec{r})
+                + \diff{}{t}\vec{\nabla}_{\dot\vec{r}_i} \tilde{U}(\vec{r},\dot\vec{r})
   \end{align*}
   es folgt wieder
   $m\ddot\vec{r}_i = \vec{K}_{i} \Leftrightarrow
-  \frac{d}{dt}\frac{\partial L}{\partial q_L} = 0, \qquad L = T -
+  \diff{}{t}\pdiff{L}{q_L} = 0, \qquad L = T -
   \tilde{U}(\vec{r},\dot\vec{r})$
 
   \begin{description}

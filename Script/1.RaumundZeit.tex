@@ -68,8 +68,8 @@ z
 Für die Basisvektoren aus Bemerkung 2 gilt: $\vec{e_k'}=(R^{-1})\vec{e_k}$ (siehe Vorübung).
 \item[Transformation] Die Trafo GL(") definiert allgemein das Transformationsverhalten eines Vektors (Tensor 1.Stufe)
 
-Beispiele: 
-$\vec{v}=\frac{d\vec{r}}{dt} \rightarrow v_k'=\sum_iR_{ki}v_i$; Geschwindigkeit, Beschleunigung, etc.\\
+Beispiele:
+$\vec{v}=\diff{\vec{r}}{t} \rightarrow v_k'=\sum_iR_{ki}v_i$; Geschwindigkeit, Beschleunigung, etc.\\
 Bedeutung: Physikalische Grundgleichungen müssen das Trafo Verhalten respektieren
 
 Bsp: $m\ddot{\vec{r}}=\vec{F}$. In $(O,e,e,e)$: $m\ddot{x_i}=F_i \Rightarrow$ in $(O,e',e',e')$: $m\ddot{x_i'}=F_i'$
@@ -114,9 +114,9 @@ Kinematik ist die „Beschreibung der Bewegung“ -- zunächst ohne auf Ursachen
 \begin{description}
 \item[Bahnkurve] $\vec{r}(t)$
 \item[Ortsvektor] % TODO Was gehört hier hin?
-\item[Geschwindigkeit] o$\vec{v}(t)=\frac{d}{dt}\vec{r}(t)$\\
+\item[Geschwindigkeit] o$\vec{v}(t)=diff{}{t}\vec{r}(t)$\\
 $\vec{v}(t)=\vec{v}(t)\D \vec{T}(t)$ mit $|\vec{T}|=1; v(t)=|\vec{v}(t)|$
-\item[Beschleunigung] $\vec{a}(t)=\frac{d}{dt}\vec{v}(t)=\dot{t}\vec{T}+v(t)\dot{\vec{T}}(t)$
+\item[Beschleunigung] $\vec{a}(t)=diff{}{t}\vec{v}(t)=\dot{t}\vec{T}+v(t)\dot{\vec{T}}(t)$
 
 \begin{figure}[h]
 \begin{center}
