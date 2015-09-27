@@ -1,7 +1,7 @@
 \section{Newtonsche Mechanik}
 \begin{itemize}
 \item basiert auf Galilei-Raum-Zeit (gültig für $v\ll c$) $m\ddot{\vec{r}}=\vec{F}(\vec{r})$ 'Fernwirkung' der Kraft $\leftrightarrow$ Widerspruch zur Vorstellung einer endlichen Ausbreitungsgeschwindigkeit von Wirkungen.
-\item relativistische Mechanik folgt in Kap.7 
+\item relativistische Mechanik folgt in Kap.7
 \end{itemize}
 \subsection{Newtonsche Bewegungs-Gleichung}
 zunächst phänomenologisch; Erfahrung: durch angabe des Anfangsortes $\vec{r}(t_0)=\vec{r}$ und der Anfangsgeschwindigkeit $\dot{\vec{r}}(t_0)=\vec{v_0}$ die Bahnkurve $\vec{r}(t)$ festgelegt ist $\Rightarrow$ wir erwarten eine Relation $\ddot{\vec{r}}(t) \sim \vec{F}(\vec{r},\dot{\vec{r}})$, gewöhnliche Differentialgleichung 2. Ordnung zur Bestimmung der Bahnkurve $\vec{r}(t)$ (Dynamik)\\
@@ -125,7 +125,7 @@ m_i\ddot{\vec{r_i}}=\vec{F_i^{(a)}}(\vec{r_i})+\sum_{i=1, j\neq i}^{N}\vec{F_{ij
 	\end{center}
 	\caption{innere und äußere Kräfte}
 \end{figure}
-\emph{für konservative Kräfte} 
+\emph{für konservative Kräfte}
 \begin{flalign*}
 	\vec{F_i^{(a)}}=-\vec{\nabla_i} U_i(\vec{r_i})\\
 	\vec{F_{ij}}=-\vec{\nabla_i}V_{ij}(|\vec{r_i}-\vec{r_j}|)
@@ -267,7 +267,7 @@ Sei ($O,\vec{e_1},\vec{e_2},\vec{e_3}$) IS\\
 $\rightarrow$ gehe über zu beschleunigtem (rotierendem) BS\\
 $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 \begin{description}
-	\desc{Einführung einer zeitabhängigen Rotation:} 
+	\desc{Einführung einer zeitabhängigen Rotation:}
 	\begin{flalign*}
 		\vec{e_i}'(t)=R(t)\vec{e_i}\\
 		RR^T=\mathds{1}
@@ -276,7 +276,7 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 	für Geschwindigkeit folgt:
 	\begin{flalign*}
 		& \diff{}{t}(\vec{r}'(t))=\sumni \dot{x}_i'(t)\vec{e_i}'(t)+\sumni x_i'(t)\dot{\vec{e_i}'}(t)=\underbrace{\dot{\vec{r}'}}_{\text{Geschwindigkeit gemessen in BS'}}+\sumni x_i'(t)\dot{\vec{e_i}'}(t)
-		\\ 
+		\\
 		\ulcorner
 		& \dot{\vec{e_i}'}=\dot{R}(t)\vec{e_i}=\dot{R}R^T\vec{e_i}'
 		\lrcorner
@@ -294,12 +294,12 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 		\diff{}{t}\vec{e_i}'(t)
 		& =(\diff{}{t}R)\vec{r_i}=((\diff{}{t}R)R^T)\vec{e_i}'=M\vec{e_i}'\\
 		\text{mit }
-		M(t) 
-		& 
+		M(t)
+		&
 		=(\diff{}{t}R)R^T=-M^T(t)=\begin{pmatrix}
 		0	&	-\Omega_3	&	\Omega_2	\\
 		\Omega_3	&	0	&	-\Omega_1	\\
-		-\Omega_2	&	\Omega_1	&	0	
+		-\Omega_2	&	\Omega_1	&	0
 		\end{pmatrix}
 	\end{flalign*}
 	Definition von $\vec{\Omega}=\begin{pmatrix}
@@ -320,7 +320,7 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 		}
 	Bedeutung von $\vec{\Omega}(t)
 	\left \{
-	\begin{tabular}{c}	
+	\begin{tabular}{c}
 	|$\vec{\Omega}$| \text{momentane Winkelgeschwindigkeit} \\
 	\text{Richtung der momentanen Drehachse}
 	\end{tabular}
@@ -343,9 +343,10 @@ $\rightarrow$ mit ($O(t),\vec{e_1}'(t),\vec{e_2}'(t),\vec{e_3}'(t)$)
 		&\diff{^2 \vec{r}'}{t} =\diff{}{t}(\dot{\vec{r}'}+\vec{\Omega}\times\vec{r}')\\
 		& \underbrace{=\ddot{\vec{r}'}+2\vec{\Omega}\times \dot{\vec{r}'}+\vec{\Omega}\times(\vec{\Omega}\times\vec{r}')+\dot{\vec{\Omega}}\times\vec{r}'	}_{\ddot{\vec{r}}...\text{ Beschleunigung }\dot{\vec{r}}...\text{ Geschwindigkeit }\vec{r}...\text{ Ortsvektor }}
 	\end{flalign*}
-	\desc{Beschleinigter Bezugspunkt $O'(t)$} 
+	\desc{Beschleinigter Bezugspunkt $O'(t)$}
 
 \end{description}
+
 
 %TODO Einschub merles mitschriften
 
