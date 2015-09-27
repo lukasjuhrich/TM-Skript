@@ -208,19 +208,164 @@ $\Rightarrow$ für kleinere Auslenkungen $\varphi<<1$: $\ddot{\varphi}+\omega^2\
   \begin{description}
   \item[Beispiel] Loretzkraft:
     \begin{align*}
-      \tilde{U}(\vec{r},\vec{\dot{r}})
-      = e \underbrace{\phi(\vec{r},t)}_{\mathclap{\text{Skalares Pot.}}} - e
-      \frac{\dot\vec{r}}{c} \cdot
-      \underbrace{\vec{A}(\vec{r},t)}_{\mathclap{\text{Vektorpot.}}} 
+      \tilde{U}(\textbf{r},\dot{\textbf{r}})
+      = e \underbrace{\phi(\textbf{r},t)}_{\mathclap{\text{Skalares Pot.}}} - e
+      \frac{\dot{\textbf{r}}}{c} \cdot
+      \underbrace{\textbf{A}(\textbf{r},t)}_{\mathclap{\text{Vektorpot.}}} \\
+      \Rightarrow \textbf{K} = e \left( E \left( \textbf{r}, t\right)
+      + \frac{\dot{\textbf{r}}}{c} \times \textbf{B} \left( \dot{\textbf{r}}, t \right)
+      \right)
     \end{align*}
+    mit $\textbf{E} = - \nabla \Phi - \frac{1}{C} \pdiff{}{t} \textbf{A},
+    \quad \textbf{B} = \nabla \times \textbf{A}$
   \end{description}
 
-\end{itemize}
+  % TODO Box
+  Die Lagrange-Funktion eines geladenen Teilchens ($e$) im
+  elektromagnetischen Feld Lautet:
+
+  \begin{equation*}
+    L(\mathbf{r}, \dot{\mathbf{r}}, t) = \frac{1}{2} m \dot{\mathbf{r}}^2
+    - e \Phi(\mathbf{r}, t) + e \frac{\dot{\mathbf{r}}}{c} \mathbf{A}(\mathbf{r}, t)
+  \end{equation*}
+
+\item Man nennt $P_{\alpha} = \pdiff{L}{\dot{q_{\alpha}}}$ den
+  „generalisierten Impuls“
+  ($ l = \frac{1}{2} m \dot{x}^2, p = \pdiff{L}{\dot{x}} = m\dot{x}$)
+
+\item Eine generalisierte Koordinate $q_{\alpha}$ heißt
+  \emph{zyklisch}, falls die Lagrange-Funktion unabhängig von
+  $q_{\alpha}$ ist: $\pdiff{L}{q_{\alpha}} = 0$
+
+  \begin{description}
+  \item[Beispiel] $q_1 = x$ (im vierten Beispiel)
+
+    Es gilt $ \diff{}{t} \pdiff{L}{\dot{q_{\alpha}}} = 0 \Rightarrow $
+    Erhaltungssatz ($P_{\alpha} = \mathsf{const.}$) (Siehe
+    Noether-Theorem)
+  \end{description}
+
+Problem mit Zylindersymmetrie:
+  $V(\mathbf{r}) = V(\rho, \varphi, z)
+  \stackrel{\mathclap{\mathsf{Sym.}}}{=} V(\rho,z)$
+
+\begin{align*}
+  x = \rho \cos \varphi \quad
+  L = \frac{1}{2} m \left( x^2+y^2+z^2 \right) - V \left( \rho, z \right) \\
+  y = \sin \varphi \\
+  L \left( \rho, (\phi), z, \dot{\rho}, \dot{\varphi}, \dot{z} \right)
+  = \frac{1}{2} m \left( \dot{\rho}^2 + \rho^2 \dot{\varphi}^2 + \dot{z}^2 \right)
+  - V(\rho,z)
+\end{align*},
+
+$\varphi$ zyklisch: $\pdiff{L}{\varphi} = 0$
+
+\begin{description}
+\item[Generalisierter Impuls]
+  $ \underbrace{\mathsf{const.} =
+    p_{\varphi}}_{\mathclap{\mathsf{Erhaltungsgr.}}}  =
+  \pdiff{L}{\dot{\varphi}} = (\mathbf{L})_3 $ (z-Komponente des Drehimpulses)
 
 \end{description}
 
+\item Diskussion von Kreiselbewegung „Schwerer Kreisel“:
+
+\begin{align*}
+  \mathbf{\Omega} \rightarrow \mathbf{\Omega} \underbrace{ \left(
+  \varphi, \dot{\varphi}, \psi, \dot{\psi}, \theta, \dot{\theta}
+  \right)}_{\mathsf{Eulerwinkel}}\\
+  \Rightarrow L = L \left(
+  \varphi, \psi, \theta, \dot{\psi}, \dot{\varphi}, \dot{\theta}
+  \right) = \frac{1}{2} \mathbf{\Omega}^{\top} \underline{G} \mathbf{\Omega}
+  - U(\theta);
+  \quad \overbrace{U(\theta) = mga\cos\theta}^{E_{pot}\:\mathsf{Kreisel}}
+\end{align*}
+
+
 \end{enumerate}
 
+\end{description}
+
+% TODO refactor where this should end.
+\end{enumerate}
+
+
+\subsection{Wirkung und Hamiltonsches Prinzip}
+
+\begin{description}
+\item[Beispiel] Vorlesung, Studenten im Hörsaal. Student $A$ soll
+  Professor $B$ ein Glas Wasser bringen, und dies schnellstmöglich.
+
+\skizze{}
+
+\item[Frage] Was ist die \emph{schnellste} Verbindung $A \rightarrow B$?
+
+  Zeit
+  \begin{align*}
+    T_{A \rightarrow B} = T(x) = T_1+T_{2} = \frac{l_1}{v_1} +
+    \frac{l_2}{v_2}
+  \end{align*}
+  Länge
+  \begin{align*}
+    l_1(x) &= \sqrt{x^2+ (a-d)^2}
+    & l_2(x) &= \sqrt{(b-x)^2 + d^2}\\
+    l'_1(x) &= \frac{x}{l_{1}(x)}
+    & l'_2(x) &= \frac{b-x}{l_{2}(x)}
+  \end{align*}
+
+\skizze{}
+
+Aus $\pdiff{T}{x} \big|_{x=\bar{x}} = 0$ folgt:
+
+\begin{align*}
+  T'(x) &= \frac{v_2 l'_1(x) + v_1 l'_2(x)}{v_1v_2}\\
+  T'(x) &= 0 \Leftrightarrow v_2 \frac{x}{l_1(x)}
+          = v_1 \frac{b-x}{l_2(x)} = 0\\
+  T'(x) &= 0 \Leftrightarrow \boxed{ \frac{\sin{\alpha}}{\sin{\alpha_2}}
+          = \frac{v_1}{v_2} }
+          \quad = \frac{n_2}{n_1} \left( v_i = \frac{c}{n_i}  \right)
+          \textnormal{Brechungsgesetz}
+\end{align*}
+
+\end{description}
+
+\paragraph{Ähnliche Fragen der Mechanik:}
+\begin{description}
+
+\item[Frage] Welche Kurve $z(t)$ führt zur schnellsten Dynamik von
+  $A \rightarrow B$?
+
+  \skizze{}
+
+  Vorgehensweise wie zuvor: Berechne die Laufzeit $T = T[z]$ -- $z(x)$
+  ist \emph{Funktion}
+
+  \skizze{}
+
+  $\rightarrow$ Suche \emph{Minimum} des \emph{Funktionals} $T[z]$
+  ($T(z(x))$) im Raum der Kurven $z(x)$.
+
+  Bei Diskretisierung $z_i = z(x_i)$:
+  $T[z] \rightarrow T (z_1, \dots, z_n)$ gewöhnliche Funktion.
+
+  Bestimme jene
+  $\lbrace z_i \:|\: i\in \lbrace 1, \dots, N \rbrace \rbrace$, für
+  die
+  $$dF = \sum\limits_i \pdiff{T}{z_i} dz_i = 0 \Leftrightarrow
+  \pdiff{T}{z_i} = 0 $$ ($i \in \lbrace 1, \dots, N \rbrace$)
+
+\item[Hier:] Funktional $T[z]$ mit $z(x)$ Funktion, bilde
+  $\sum\limits_i \rightarrow \int dx$,
+  $\sum\limits_{i=1}^N \pdiff{T}{z_i} \rightarrow \int dx \frac{\delta
+    T}{\delta z(x)} \delta z(x)$ % TODO Pfeile
+
+  Sodass das Minimum derer
+  $0 \stackrel{!}{=} \delta T = \int dx \left( \frac{\delta T}{\delta
+      z(x)} \delta z(x) \right) \Leftrightarrow$
+
+% TODO *hier* weitermachen :)
+
+\end{description}
 
 
 %%% Local Variables:
